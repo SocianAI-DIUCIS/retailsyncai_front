@@ -26,7 +26,12 @@ node -v
 npm -v
 ```
 
-### 2. Create a New Next.js App (Recommended)
+### 2. Clone / Download the GitHub Repository (Recommended) or Create a New Next.js App
+
+#### Clone the Project from GitHub or Download:
+```bash
+git clone https://github.com/SocianAI-DIUCIS/retailsyncai_front.git
+```
 
 Use the official create-next-app CLI:
 
