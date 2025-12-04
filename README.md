@@ -33,24 +33,6 @@ npm -v
 git clone https://github.com/SocianAI-DIUCIS/retailsyncai_front.git
 ```
 
-#### Or for Downloading
-
-Use the official create-next-app CLI:
-
-```bash
-npx create-next-app@latest retailsyncai_front
-cd retailsyncai_front
-```
-
-You will be asked:
-- Use TypeScript? → Yes
-- Use TailwindCSS? → Yes
-- Use App Router? → Yes
-- Use ESLint? → Optional
-- Import alias? → Default (@/)
-
-This scaffolds a complete, modern Next.js project.
-
 ### 3. Run the Development Server
 
 Install dependencies (if needed):
@@ -69,49 +51,7 @@ Visit: http://localhost:3000
 
 Next.js will automatically hot-reload when you edit files.
 
-### 4. Enable TypeScript (If Not Selected During Setup)
-
-If you skipped TypeScript during scaffolding, enable it manually:
-
-```bash
-npm install --save-dev typescript @types/react @types/node
-```
-
-Next.js will create:
-- tsconfig.json
-- next-env.d.ts
-
-### 5. Add Tailwind CSS (If Not Included During Setup)
-
-If you didn’t select Tailwind during create-next-app:
-
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-Update tailwind.config.js:
-
-```bash
-module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: { extend: {} },
-  plugins: [],
-};
-```
-
-Add Tailwind to globals.css:
-
-```bash
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-### 6. Build for Production
+### 4. Build for Production
 
 Create an optimized production build:
 
@@ -136,7 +76,7 @@ Common scripts:
 }
 ```
 
-### 7. Viewing the App
+### 5. Viewing the App
 
 Visit:
 
