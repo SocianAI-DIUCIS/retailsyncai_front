@@ -1,27 +1,23 @@
-## 📘 RetailSyncAI Frontend (Next.js + TypeScript + TailwindCSS)
+## RetailSyncAI Frontend (Next.js + TypeScript + TailwindCSS)
 
 RetailSyncAI Frontend is a modern, high-performance React application built with Next.js (App Router), TypeScript, and TailwindCSS.
 This guide explains how to set up the frontend environment, run the development server, enable TypeScript, integrate TailwindCSS, and create production builds.
 
-### 🚀 Features
+### Features
 
-⚡ Next.js App Router (latest architecture)
-
-🔒 TypeScript-first setup
-
-🎨 TailwindCSS for fast UI development
-
-🔥 Hot reloading development server
-
-📦 Production-ready build pipeline
-
-🖥️ Fully compatible with RetailSyncAI Django backend
+- Next.js App Router (latest architecture)
+- TypeScript-first setup
+- TailwindCSS for fast UI development
+- Hot reloading development server
+- Production-ready build pipeline
+- Fully compatible with RetailSyncAI Django backend
 
 
 ### 1. Install Node.js
 
 Download and install the latest Node.js LTS:
 https://nodejs.org/
+#### Recommended is v24.11.1
 
 Verify installation:
 
@@ -141,12 +137,12 @@ http://localhost:3000
 
 Start editing the home page:
 
-# app/page.tsx
+#### app/page.tsx
 
 
 Live reload applies changes instantly.
 
-### 📂 Recommended Project Structure
+### Recommended Project Structure
 ```bash
 retailsyncai_front/
 │
@@ -168,13 +164,13 @@ retailsyncai_front/
 └── package.json
 ```
 
-### 🌐 Backend Integration (Optional)
+### Backend Integration (Optional)
 
 If using the RetailSyncAI Django backend, create a .env.local file:
 
 NEXT_PUBLIC_API_BASE=http://localhost:8000/api
 
-### 🏁 You're Ready!
+### You're Ready!
 
 You now have a complete, modern, scalable Next.js frontend with:
 - TypeScript
