@@ -1,36 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 📘 RetailSyncAI Frontend (Next.js + TypeScript + TailwindCSS)
 
-## Getting Started
+RetailSyncAI Frontend is a modern, high-performance React application built with Next.js (App Router), TypeScript, and TailwindCSS.
+This guide explains how to set up the frontend environment, run the development server, enable TypeScript, integrate TailwindCSS, and create production builds.
 
-First, run the development server:
+### 🚀 Features
+
+⚡ Next.js App Router (latest architecture)
+
+🔒 TypeScript-first setup
+
+🎨 TailwindCSS for fast UI development
+
+🔥 Hot reloading development server
+
+📦 Production-ready build pipeline
+
+🖥️ Fully compatible with RetailSyncAI Django backend
+
+
+### 1. Install Node.js
+
+Download and install the latest Node.js LTS:
+https://nodejs.org/
+
+Verify installation:
+
+```bash
+node -v
+npm -v
+```
+
+### 2. Create a New Next.js App (Recommended)
+
+Use the official create-next-app CLI:
+
+```bash
+npx create-next-app@latest retailsyncai_front
+cd retailsyncai_front
+```
+
+You will be asked:
+- Use TypeScript? → Yes
+- Use TailwindCSS? → Yes
+- Use App Router? → Yes
+- Use ESLint? → Optional
+- Import alias? → Default (@/)
+
+This scaffolds a complete, modern Next.js project.
+
+### 3. Run the Development Server
+
+Install dependencies (if needed):
+
+```bash
+npm install
+```
+
+Start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js will automatically hot-reload when you edit files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Enable TypeScript (If Not Selected During Setup)
 
-## Learn More
+If you skipped TypeScript during scaffolding, enable it manually:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install --save-dev typescript @types/react @types/node
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js will create:
+- tsconfig.json
+- next-env.d.ts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 5. Add Tailwind CSS (If Not Included During Setup)
 
-## Deploy on Vercel
+If you didn’t select Tailwind during create-next-app:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Update tailwind.config.js:
+
+```bash
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: { extend: {} },
+  plugins: [],
+};
+```
+
+Add Tailwind to globals.css:
+
+```bash
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### 6. Build for Production
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Start the production server:
+
+```bash
+npm start
+```
+
+Common scripts:
+
+```bash
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}
+```
+
+### 7. Viewing the App
+
+Visit:
+
+http://localhost:3000
+
+Start editing the home page:
+
+# app/page.tsx
+
+
+Live reload applies changes instantly.
+
+### 📂 Recommended Project Structure
+```bash
+retailsyncai_front/
+│
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── (route folders)
+│
+├── components/
+│
+├── styles/
+│   └── globals.css
+│
+├── public/
+│
+├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
+└── package.json
+```
+
+### 🌐 Backend Integration (Optional)
+
+If using the RetailSyncAI Django backend, create a .env.local file:
+
+NEXT_PUBLIC_API_BASE=http://localhost:8000/api
+
+### 🏁 You're Ready!
+
+You now have a complete, modern, scalable Next.js frontend with:
+- TypeScript
+- TailwindCSS
+- Production build support
+- Hot reload dev environment
