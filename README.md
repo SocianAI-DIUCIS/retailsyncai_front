@@ -33,6 +33,8 @@ npm -v
 git clone https://github.com/SocianAI-DIUCIS/retailsyncai_front.git
 ```
 
+#### Or for Downloading
+
 Use the official create-next-app CLI:
 
 ```bash
